@@ -23,6 +23,8 @@ public class MonitorsGenerator {
 	    monitors.put(i, generateMonitor());
 	}
 	
+	System.out.println("Data for 100 monitors generated");
+	
 	return monitors;
     }
     

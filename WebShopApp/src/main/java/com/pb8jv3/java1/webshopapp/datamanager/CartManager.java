@@ -1,7 +1,8 @@
 package com.pb8jv3.java1.webshopapp.datamanager;
 
-import com.pb8jv3.java1.webshopapp.datamanager.data.Monitor;
-import java.util.Map;
+import com.pb8jv3.java1.webshopapp.filemanager.ReadFromFile;
+import com.pb8jv3.java1.webshopapp.filemanager.utility.FileLocation;
+import java.io.FileNotFoundException;
 
 /**
  *
@@ -9,8 +10,7 @@ import java.util.Map;
  */
 public class CartManager extends Manager{
 
-    public CartManager(Map<Integer, Monitor> products) {
-	super(products);
+    public CartManager() throws FileNotFoundException {
+	super(ReadFromFile.readProducts(FileLocation.CART_DATA_FILE_LOCATION));
     }
-
 }

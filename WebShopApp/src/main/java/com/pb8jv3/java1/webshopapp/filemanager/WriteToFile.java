@@ -30,6 +30,10 @@ public class WriteToFile {
 	WriteToFile.writer(wishlistManager.getProducts(), FileLocation.WISHLIST_DATA_FILE_LOCATION);
     }
     
+    public static void write(Map<Integer, Monitor> products, String location) {
+	WriteToFile.writer(products, location);
+    }
+    
     private static void writer(Map<Integer, Monitor> monitors, String fileLocation){
         try (FileWriter writer = new FileWriter(fileLocation)) {
 	    monitors.entrySet().forEach(entry -> {

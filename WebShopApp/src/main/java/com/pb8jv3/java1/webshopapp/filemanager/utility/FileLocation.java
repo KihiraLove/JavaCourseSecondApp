@@ -22,6 +22,10 @@ public class FileLocation {
 
     private FileLocation() {
     }
+    
+    public static Path getDataPath() {
+	return Paths.get(new File("").getAbsolutePath().concat(DATA_DIR_LOCATION));
+    }
 
     public static Path getProductDataPath() {
 	return Paths.get(new File("").getAbsolutePath().concat(PRODUCT_DATA_FILE_LOCATION));
