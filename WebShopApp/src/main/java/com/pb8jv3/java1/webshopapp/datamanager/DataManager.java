@@ -7,9 +7,9 @@ import java.io.FileNotFoundException;
  * @author Kertesz Domonkos PB8JV3
  */
 public class DataManager {
-    private CartManager cartManager;
-    private WishlistManager wishlistManager;
-    private ProductManager productManager;
+    public CartManager cartManager;
+    public WishlistManager wishlistManager;
+    public ProductManager productManager;
 
     public DataManager() throws FileNotFoundException {
 	this.cartManager = new CartManager();

@@ -14,10 +14,10 @@ public class Monitor {
     Integer price;
     Integer inStock;
 
-    public Monitor(String manufacturer, String modelNumber, String aspectRatio, DisplaySize size, Integer price, DisplayType type, Integer refreshRate, Integer inStock) {
+    public Monitor(String manufacturer, String modelNumber, String resolution, DisplaySize size, Integer price, DisplayType type, Integer refreshRate, Integer inStock) {
 	this.manufacturer = manufacturer;
 	this.modelNumber = modelNumber;
-	this.resolution = aspectRatio;
+	this.resolution = resolution;
 	this.size = size;
 	this.price = price;
 	this.type = type;

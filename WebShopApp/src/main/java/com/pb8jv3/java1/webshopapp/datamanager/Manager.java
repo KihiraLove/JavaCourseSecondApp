@@ -9,7 +9,7 @@ import java.util.Map;
  */
 public class Manager {
     
-    Map<Integer, Monitor> products;
+    public Map<Integer, Monitor> products;
 
     public Manager(Map<Integer, Monitor> products) {
 	this.products = products;
@@ -19,8 +19,9 @@ public class Manager {
 	return products;
     }
 
-    public void setProducts(Map<Integer, Monitor> products) {
+    public Map<Integer, Monitor> setProducts(Map<Integer, Monitor> products) {
 	this.products = products;
+	return products;
     }
     
     
