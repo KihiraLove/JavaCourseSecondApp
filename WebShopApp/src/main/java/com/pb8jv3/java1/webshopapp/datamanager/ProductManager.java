@@ -4,7 +4,7 @@ import com.pb8jv3.java1.webshopapp.datamanager.data.Monitor;
 import com.pb8jv3.java1.webshopapp.filemanager.ReadFromFile;
 import com.pb8jv3.java1.webshopapp.filemanager.utility.FileLocation;
 import java.io.FileNotFoundException;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -18,7 +18,7 @@ public class ProductManager extends Manager {
     }
     
     public Map<Integer, Monitor> getProductsByManufacturer(String manufacturer){
-	Map<Integer, Monitor> productsByManufacturer = new HashMap<>();
+	Map<Integer, Monitor> productsByManufacturer = new LinkedHashMap<>();
 	super.getProducts().entrySet().stream().filter(entry -> (entry.getValue().getManufacturer().equals(manufacturer))).forEachOrdered(entry -> {
 	    productsByManufacturer.put(entry.getKey(), entry.getValue());
 	});

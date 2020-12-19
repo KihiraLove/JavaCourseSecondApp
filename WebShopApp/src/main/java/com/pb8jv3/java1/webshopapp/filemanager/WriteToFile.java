@@ -4,6 +4,7 @@ import com.pb8jv3.java1.webshopapp.filemanager.utility.FileLocation;
 import com.pb8jv3.java1.webshopapp.datamanager.WishlistManager;
 import com.pb8jv3.java1.webshopapp.datamanager.ProductManager;
 import com.pb8jv3.java1.webshopapp.datamanager.CartManager;
+import com.pb8jv3.java1.webshopapp.datamanager.DataManager;
 import com.pb8jv3.java1.webshopapp.datamanager.data.Monitor;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -16,6 +17,12 @@ import java.util.Map;
 public class WriteToFile {
     
     private WriteToFile() {
+    }
+    
+    public static void write(DataManager dataManager) {
+	WriteToFile.write(dataManager.getProductManager());
+	WriteToFile.write(dataManager.getCartManager());
+	WriteToFile.write(dataManager.getWishlistManager());
     }
     
     public static void write(ProductManager productManager) {

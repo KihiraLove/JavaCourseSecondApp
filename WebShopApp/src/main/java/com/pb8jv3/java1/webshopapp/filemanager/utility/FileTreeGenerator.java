@@ -38,10 +38,10 @@ public class FileTreeGenerator {
 	    if(wishlistFile.createNewFile()){
 		System.out.println("File created in data directory: wishlist.txt");
 	    } else {
-		System.out.println("File already exists: product.txt");
+		System.out.println("File already exists: wishlist.txt");
 	    }
 	} catch (IOException e) {
-	    throw new FailedFileCreationException("Failed to create file: product.txt "+ e.getMessage());
+	    throw new FailedFileCreationException("Failed to create file: wishlist.txt "+ e.getMessage());
 	}
 	try {
 	    File productFile = new File(FileLocation.CART_DATA_FILE_LOCATION);

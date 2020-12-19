@@ -7,17 +7,17 @@ package com.pb8jv3.java1.webshopapp.datamanager.data;
 public class Monitor {
     String manufacturer;
     String modelNumber;
-    String aspectRatio;
+    DisplayType type;
+    String resolution;
+    Integer refreshRate;
     DisplaySize size;
     Integer price;
-    DisplayType type;
-    Integer refreshRate;
     Integer inStock;
 
     public Monitor(String manufacturer, String modelNumber, String aspectRatio, DisplaySize size, Integer price, DisplayType type, Integer refreshRate, Integer inStock) {
 	this.manufacturer = manufacturer;
 	this.modelNumber = modelNumber;
-	this.aspectRatio = aspectRatio;
+	this.resolution = aspectRatio;
 	this.size = size;
 	this.price = price;
 	this.type = type;
@@ -41,12 +41,12 @@ public class Monitor {
 	this.modelNumber = modelNumber;
     }
 
-    public String getAspectRatio() {
-	return aspectRatio;
+    public String getResolution() {
+	return resolution;
     }
 
-    public void setAspectRatio(String aspectRatio) {
-	this.aspectRatio = aspectRatio;
+    public void setResolution(String aspectRatio) {
+	this.resolution = aspectRatio;
     }
 
 
@@ -91,13 +91,13 @@ public class Monitor {
     }
     
     public String printable(){
-	return manufacturer + ";" + modelNumber + ";" + aspectRatio + ";" + size.getWidth() + ";" + size.getHeight() + ";" + price + ";" + type + ";" + refreshRate + ";" + inStock;
+	return manufacturer + ";" + modelNumber + ";" + resolution + ";" + size.getWidth() + ";" + size.getHeight() + ";" + price + ";" + type + ";" + refreshRate + ";" + inStock;
     }
     
     public void printMonitorData(){
 	System.out.println("Manufacturer: " + manufacturer + "\n" +
 			    "Model Number: " + modelNumber + "\n" +
-			    "Aspect Ratio: " + aspectRatio + "\n" +
+			    "Aspect Ratio: " + resolution + "\n" +
 			    "Width: " + size.getWidth() + "\n" +
 			    "Height: " + size.getHeight() + "\n" +
 			    "Price: " + price + "\n" +

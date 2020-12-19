@@ -16,9 +16,9 @@ public class FileLocation {
     public static final String WISHLIST_DATA_FILE_NAME = "wishlist.txt";
     public static final String CART_DATA_FILE_NAME = "cart.txt";
     
-    public static final String PRODUCT_DATA_FILE_LOCATION = DATA_DIR_LOCATION + PRODUCT_DATA_FILE_NAME;
-    public static final String WISHLIST_DATA_FILE_LOCATION = DATA_DIR_LOCATION + WISHLIST_DATA_FILE_NAME;
-    public static final String CART_DATA_FILE_LOCATION = DATA_DIR_LOCATION + CART_DATA_FILE_NAME;
+    public static final String PRODUCT_DATA_FILE_LOCATION = "data/product.txt";
+    public static final String WISHLIST_DATA_FILE_LOCATION = "data/wishlist.txt";
+    public static final String CART_DATA_FILE_LOCATION = "data/cart.txt";
 
     private FileLocation() {
     }

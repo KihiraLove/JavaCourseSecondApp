@@ -5,7 +5,7 @@ import com.pb8jv3.java1.webshopapp.datamanager.data.DisplayType;
 import com.pb8jv3.java1.webshopapp.datamanager.data.Monitor;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -19,7 +19,7 @@ public class ReadFromFile {
     
     public static Map<Integer, Monitor> readProducts(String location) throws FileNotFoundException{
 	File managerFile = new File(location);
-	Map<Integer, Monitor> products = new HashMap<>();
+	Map<Integer, Monitor> products = new LinkedHashMap<>();
 	Scanner fileScanner = new Scanner(managerFile);
 	while(fileScanner.hasNextLine()) {
 	    String line = fileScanner.nextLine();

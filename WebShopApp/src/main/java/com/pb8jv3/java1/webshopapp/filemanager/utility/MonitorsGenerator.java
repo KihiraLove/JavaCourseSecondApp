@@ -3,7 +3,7 @@ package com.pb8jv3.java1.webshopapp.filemanager.utility;
 import com.pb8jv3.java1.webshopapp.datamanager.data.DisplayType;
 import com.pb8jv3.java1.webshopapp.datamanager.data.DisplaySize;
 import com.pb8jv3.java1.webshopapp.datamanager.data.Monitor;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Random;
 
@@ -17,7 +17,7 @@ public class MonitorsGenerator {
     }
     
     public static Map<Integer, Monitor> generateMonitors(){
-	Map<Integer, Monitor> monitors = new HashMap<>();
+	Map<Integer, Monitor> monitors = new LinkedHashMap<>();
 
 	for(int i = 0; i < 100; i++){
 	    monitors.put(i, generateMonitor());
